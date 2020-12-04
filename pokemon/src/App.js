@@ -9,10 +9,23 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      pokemon: data
+      pokemon: []
     };
   }
 
+  componentDidMount() {
+    
+    console.log('componentDidMount running');
+    this.setState({pokemon: data})
+
+  }
+
+  componentDidUpdate(prevState, prevProps) {
+
+    console.log('componentDidUpdate running');
+
+  }
+  
   render() {
     return (
       <div className="App">
